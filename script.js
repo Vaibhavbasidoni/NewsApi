@@ -30,11 +30,6 @@ function displayNews(newsData) {
   const cardsContainer = document.getElementById('cardsContainer');
   cardsContainer.innerHTML = '';
 
-  if (!newsData) {
-    console.log('No news data available');
-    return;
-  }
-
   const filteredNews = newsData.filter(news => news.urlToImage && !isInvalidImage(news.urlToImage));
 
   filteredNews.forEach(news => {
